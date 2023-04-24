@@ -21,7 +21,7 @@ Version: 2.0.0
     --el-gradient-start: #1859B4;
     --el-gradient-end: #0467F1;
     --background-color: #ffffff;
-    --background-secondary-color: #F0F4F8;
+    --background-secondary-color: #ffffff;
     --text-primary: #303036;
     --text-secondary: #63636b;
     --border-color: #D4D4E1;
@@ -242,7 +242,7 @@ table.table-secondary tbody tr:first-child {
 }
 
 table.table-secondary tbody tr:hover {
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 table.table-bordered tr:nth-child(even) {
@@ -263,7 +263,7 @@ table td, table th {
 }
 
 table tr:nth-child(even) {
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 table thead tr {
@@ -864,7 +864,7 @@ blockquote footer {
 .accordion-item {
     display: block;
     border-radius: var(--el-border-radius);
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
     overflow: hidden;
     margin-bottom: 1rem;
 }
@@ -907,7 +907,7 @@ blockquote footer {
 .bread-crumbs {
     position: relative;
     padding: 1.125rem 0;
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 .bread-crumbs-list {
@@ -1288,7 +1288,7 @@ input[type="text"]:disabled,
   input[type="datetime-local"]:disabled,
   input[type="file"]:disabled,
   textarea:disabled {
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 textarea {
@@ -1861,7 +1861,7 @@ textarea {
 }
 
 .intro-item-bgc {
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 .intro-content {
@@ -2232,7 +2232,7 @@ textarea {
     height: 100%;
     display: flex;
     border-radius: var(--el-border-radius);
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
     align-items: center;
     padding-right: 0.625rem;
 }
@@ -2288,7 +2288,7 @@ textarea {
     border-radius: 50%;
     overflow: hidden;
     margin-right: 1.25rem;
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 .reviews-item-img img {
@@ -2307,7 +2307,7 @@ textarea {
 .news-item-img {
     position: relative;
     display: block;
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 .news-item-img img {
@@ -2561,7 +2561,7 @@ textarea {
 .contact-info {
     position: relative;
     padding: 2rem 1.25rem;
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
     border-radius: var(--el-border-radius);
     height: 100%;
 }
@@ -2840,7 +2840,7 @@ body.mmm-open .mmm {
 }
 
 .mmm-content {
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 .mmm-list {
@@ -3110,7 +3110,7 @@ body.mmm-open .mmm {
 }
 
 .section-bgc {
-    background-color: var(--background-secondary-color);
+    background-color: var(--background-color);
 }
 
 .section-header-margin-none .section-heading {
