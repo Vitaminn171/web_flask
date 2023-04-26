@@ -17,6 +17,17 @@ for index, row in products_df.iterrows():
             'description': row["description"]}
     products.append(temp)
 
+
+"""
+Hệ thống đề xuất sử dụng ma trận tần suất TF-IDF (term frequency-inverse document frequency) và độ đo tương đồng cosine để tìm kiếm các sản phẩm liên quan trong một bộ dữ liệu.
+
+Đầu tiên, TfidfVectorizer được sử dụng để khởi tạo một thể hiện của lớp chứa các thông số cho việc mã hóa tài liệu thành ma trận TF-IDF. Khi được gọi với không có tham số nào, các giá trị mặc định được sử dụng. Bạn cũng có thể chỉ định một số tham số để điều chỉnh các thông số khác như kích cỡ của từ vựng, loại bỏ từ dừng và xác định chiến lược mã hóa (bi-gram hay tri-gram).
+
+Sau đó, phương thức fit_transform được gọi trên danh sách các tên sản phẩm (products_df['name']) để biến đổi chúng thành một ma trận TF-IDF.
+
+Cuối cùng, phương thức cosine_similarity được áp dụng lên ma trận TF-IDF để tính toán độ đo tương đồng cosine giữa tất cả các cặp sản phẩm. Kết quả là một ma trận vuông trong đó giá trị ở hàng i, cột j là độ đo tương đồng cosine giữa sản phẩm i và sản phẩm j.
+"""
+
 tfidf_vectorizer = TfidfVectorizer()
 tfidf_matrix = tfidf_vectorizer.fit_transform(products_df['name'])
 cosine_sim = cosine_similarity(tfidf_matrix)
