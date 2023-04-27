@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row flex-nowrap align-items-center justify-content-between">
                 <div class="col-auto header-fixed-col logo-wrapper">
-                    <a href="index.html" class="logo" title="PathSoft">
+                    <a href="../" class="logo" title="PathSoft">
                         <img src="../static/img/logo.svg" width="115" height="36" alt="PathSoft">
                     </a>
                 </div>
@@ -177,7 +177,7 @@
 									<img data-src="../../static/img/image/{{ product['u_id'] }}.jpg" class="lazy" style="width: 90%; height: auto; align-items: center; margin: 10px" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="">
 								</a>
 								<div class="news-item-info">
-									<div class="news-item-date">{{ product['price'] }}</div>
+									<div class="news-item-date" style="font-size: x-large;"><sup>$</sup>{{ product['price'] }}</div>
 									<h3 class="news-item-heading item-heading"> {{ product['name'] }}
 										<a href="news-post.html" title="Benefits Of Async/Await"></a>
 									</h3>
@@ -204,9 +204,9 @@
                                             <img data-src="../../static/img/image/{{ item['u_id'] }}.jpg" class="lazy" style="width: 90%; height: auto; align-items: center; margin: 10px" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="">
                                         </a>
                                         <div class="news-item-info">
-                                            <div class="news-item-date">{{ item['price'] }}</div>
+                                            <div class="news-item-date"><sup>$</sup>{{ item['price'] }}</div>
                                             <p class="">
-                                                <a href="#">{{ item['name'] }}</a>
+                                                <a href="/detail/{{ item['u_id'] }}">{{ item['name'] }}</a>
                                             </p>
                                             <div class="news-item-desc">
                                                 <!-- <p>Asynchronous functions are a good and bad thing in JavaScript.</p> -->

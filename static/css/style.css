@@ -21,7 +21,8 @@ Version: 2.0.0
     --el-gradient-start: #1859B4;
     --el-gradient-end: #0467F1;
     --background-color: #ffffff;
-    --background-secondary-color: #F0F4F8;
+    --background-secondary-color: white;
+    --background-third-color: #F0F4F8;
     --text-primary: #303036;
     --text-secondary: #63636b;
     --border-color: #D4D4E1;
@@ -2323,6 +2324,8 @@ textarea {
 .news-item-info {
     position: relative;
     padding: 2.1875rem 1.25rem 1.25rem;
+    height: 100%;
+    background-color: var(--background-third-color);
 }
 
 .news-item-date {
