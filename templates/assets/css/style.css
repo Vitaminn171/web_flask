@@ -20,8 +20,8 @@ Version: 2.0.0
     --accent-color: #186ADC;
     --el-gradient-start: #1859B4;
     --el-gradient-end: #0467F1;
-    --background-color: #ffffff;
-    --background-secondary-color: #ffffff;
+    --background-color: white;
+    --background-secondary-color: white;
     --text-primary: #303036;
     --text-secondary: #63636b;
     --border-color: #D4D4E1;
@@ -518,7 +518,7 @@ blockquote footer {
 
 .item-style {
     position: relative;
-    background-color: var(--background-color);
+    background-color: #ffffff;
     border-radius: var(--el-border-radius);
     overflow: hidden;
     color: var(--text-primary);
@@ -2307,7 +2307,7 @@ textarea {
 .news-item-img {
     position: relative;
     display: block;
-    background-color: var(--background-color);
+    background-color: white;
 }
 
 .news-item-img img {

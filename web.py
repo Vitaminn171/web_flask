@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
-products_df = pd.read_csv('E:\zzzzzzzzz\IT\zz Tai lieu hoc tap\Data Mining\dataset.csv')
+products_df = pd.read_csv('dataset.csv')
 products = list()
 
 for index, row in products_df.iterrows():
