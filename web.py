@@ -28,8 +28,13 @@ Sau đó, phương thức fit_transform được gọi trên danh sách các tê
 Cuối cùng, phương thức cosine_similarity được áp dụng lên ma trận TF-IDF để tính toán độ đo tương đồng cosine giữa tất cả các cặp sản phẩm. Kết quả là một ma trận vuông trong đó giá trị ở hàng i, cột j là độ đo tương đồng cosine giữa sản phẩm i và sản phẩm j.
 """
 
+# Tạo ma trận tần xuất
 tfidf_vectorizer = TfidfVectorizer()
+
+# gọi danh sách các tên sản phẩm (products_df['name']) để biến đổi thành một ma trận tần xuất
 tfidf_matrix = tfidf_vectorizer.fit_transform(products_df['name'])
+
+# tính điểm cosine giữa tất cả các cặp sản phẩm
 cosine_sim = cosine_similarity(tfidf_matrix)
 
 def recommend_products(product_name, cosine_sim=cosine_sim):
@@ -42,9 +47,10 @@ def recommend_products(product_name, cosine_sim=cosine_sim):
     
     # sắp xếp danh sách sản phẩm theo điểm cosine similarity giảm dần
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    
     # lấy danh sách top 10 sản phẩm có điểm cosine similarity cao nhất và trả về
-    product_indices = [i[0] for i in sim_scores[1:6]]
-    product_scores = [i[1] for i in sim_scores[1:6]]
+    product_indices = [i[0] for i in sim_scores[1:6]] # lấy 5 sản phẩm có điểm cao nhất bỏ đi sản phẩm đầu tiên do là chính nó
+    product_scores = [i[1] for i in sim_scores[1:6]] # lấy điểm của 5 sản phẩm cao nhất
     return products_df.loc[product_indices, ["u_id"]].assign(similarity_score=product_scores)
 
 def paginate(products, page):
@@ -59,6 +65,7 @@ def find_by_id(list_id,result_list,products_list):
         temp = next(item for item in products_list if str(item["u_id"]) == id)
         result_list.append(temp) 
     return result_list
+
 @app.route('/')
 def main():
     page = int(request.args.get('page', 1))
